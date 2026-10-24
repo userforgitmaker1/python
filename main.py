@@ -6,9 +6,9 @@ from datetime import datetime, timedelta
 
 def ask_number():
     while True:
-        answer = input("Number of commits [20]: ").strip()
+        answer = input("Number of commits [2000]: ").strip()
         if not answer:
-            return 20
+            return 2000
         try:
             number = int(answer)
             if number > 0:
@@ -33,7 +33,7 @@ def ask_file():
 def random_date():
     now = datetime.now()
     return now - timedelta(
-        days=random.randint(0, 364),
+        days=random.randint(0, 2364),
         seconds=random.randint(0, 86399),
     )
 
